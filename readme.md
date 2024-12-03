@@ -1,7 +1,7 @@
 ### 0. Usage 
 
 The url is validated on this format: http://www.example.com
-**PROTOCOLS MUST BE PRESENT**
+*PROTOCOLS MUST BE PRESENT*
 
 Commands:
 
@@ -10,8 +10,10 @@ Commands:
 3) Start Server:            npm start
 4) Start Dev:               npm run dev
 
-//GET -> locahost:8000/<<MINIFIED_URL>>
-//POST -> lodalhost:8000 (content-type: appliation/json) (body: {'url': 'https://www.linkedin.com'})
+Routes:
+
+1) GET -> locahost:8000/<<MINIFIED_URL>>
+2) POST -> lodalhost:8000 (content-type: appliation/json) (body: {'url': 'https://www.linkedin.com'})
 
 
 ### 1. Minification URL Algorithm: 
