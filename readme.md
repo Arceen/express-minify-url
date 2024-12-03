@@ -1,4 +1,4 @@
-# 0 Usage 
+### 0. Usage 
 
 The url is validated on this format: http://www.example.com
 **PROTOCOLS MUST BE PRESENT**
@@ -14,7 +14,7 @@ Commands:
 //POST -> lodalhost:8000 (content-type: appliation/json) (body: {'url': 'https://www.linkedin.com'})
 
 
-# 1 Minification URL Algorithm: 
+### 1. Minification URL Algorithm: 
 
 1) Use the first/last 6 letters of existing hashing algorithms (MD5, Bcrypt, SHA256) as minified url candidate, by putting original url inside.
    
@@ -28,7 +28,7 @@ Commands:
 
 6) Else we add the current time stamp to it and start from step 1 until there is not collision on step (3)
 
-# 2 Limitations:
+### 2. Limitations:
 
 1) The data is huge and our in-memory storage(RAM) is low, we can round-robin delete it based on the timestamp.
 
@@ -37,12 +37,12 @@ Commands:
 3) The case where we run out of 6 alphanumeric & reserved URL letters, 
 
 
-# 3 Minified Url Properties:
+### 3. Minified Url Properties:
 
 Alphanumeric (26+26+10)^6. Could use ~, ., _, - for a 4^6 time more combination
 
 
-# 4 Other Options Considered
+### 4. Approaches Considered
 
 1) Built-in btoa(). Issue is that it contains redundancy of www. or .com. in its first & last code. so the uniqueness pool becomes small
 
